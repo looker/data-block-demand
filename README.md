@@ -1,7 +1,7 @@
-## Area120 DEMAND - Data Block
+## Area 120 DEMAND - Data Block
 
 
-**Note: Before using this block, you will need to acquire the [Demand dataset from Area120](https://console.cloud.google.com/marketplace/details/demand-public/demand-live-event-tracker).**
+**Note: Before using this block, you will need to acquire the [DEMAND dataset from Area 120](https://console.cloud.google.com/marketplace/details/demand-public/demand-live-event-tracker).**
 
 The DEMAND Live Event Tracker data block for Looker is a robust data model that offers a comprehensive tracker of sports, concerts, festivals, conferences, theater and streaming/TV events as they are known to the world, updated daily. This is, in essence: a giant people movement/demand data-set. This data model can be used as an early indicator of when things will start to normalize and events begin to get scheduled and tickets go on sale and show price activity.
 
