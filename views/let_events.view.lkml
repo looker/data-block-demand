@@ -21,6 +21,11 @@ view: let_events {
     sql: ${TABLE}.airport_codes ;;
   }
 
+  dimension: county_name {
+    type: string
+    sql: ${TABLE}.county_name ;;
+  }
+
   dimension: geo_interest {
     label: "Search Interest by Geo"
     type: string

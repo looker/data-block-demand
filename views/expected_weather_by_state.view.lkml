@@ -4,8 +4,7 @@ view: expected_weather_by_state {
       column: calendar_day_of_year {}
       column: average_min_temparature { field: weather.average_min_temparature }
       column: average_max_temparature { field: weather.average_max_temparature }
-      column: state_name { field: date_table.state_name }
-      column: state_fips { field: date_table.state_fips }
+      column: state_fips { field: date_table.state_fips_code }
     }
     sql_trigger_value: SELECT CURRENT_DATE ;;
   }
@@ -31,10 +30,10 @@ view: expected_weather_by_state {
 #     value_format: "#,##0.0 " °F""
     type: number
   }
-  dimension: state_name {
-    hidden: yes
-    label: "Location State Name"
-  }
+#   dimension: state_name {
+#     hidden: yes
+#     label: "Location State Name"
+#   }
   dimension: state_fips {
     hidden: yes
     label: "Location State Fips"

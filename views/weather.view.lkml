@@ -85,7 +85,7 @@ view: weather {
               JOIN `bigquery-public-data.ghcn_d.ghcnd_stations` stations on w.id=stations.id
               GROUP BY date,w.id,stations.longitude, stations.latitude)
               SELECT
-               c.geo_id,
+               c.lsad_name,
               w.date
               ,AVG(TMAX) AS TMAX
           ,AVG(WESD) AS WESD
@@ -172,9 +172,9 @@ view: weather {
     hidden: yes
   }
 
-  dimension: fips {
+  dimension: county_lsad {
     type: string
-    sql: CAST(${TABLE}.geo_id as string);;
+    sql: CAST(${TABLE}.county_lsad as string);;
   }
 
   dimension: awdr {
@@ -654,7 +654,7 @@ dimension: pk {
   hidden: yes
   primary_key: yes
   type: string
-  sql: CONCAT(CAST(${weather_date} AS STRING),'-',CAST(${fips} AS STRING)) ;;
+  sql: CONCAT(CAST(${weather_date} AS STRING),'-',CAST(${county_lsad} AS STRING)) ;;
 }
 
 dimension: location {
@@ -685,21 +685,21 @@ measure: average_daily_precipitation {
 }
 
 set: detail {
-  fields: [fips, tmax]
+  fields: [county_lsad, tmax]
 }
 }
 
 view: weather_facts {
   derived_table: {
     explore_source: date_table {
-      column: county_geoid { field: county_overlap.county_geoid }
+      column: county_lsad { field: fips_overlap.area_name }
       column: calendar_day_of_year {}
       column: average_max_temparature { field: weather.average_max_temparature }
       column: average_min_temparature { field: weather.average_min_temparature }
     }
   }
-  dimension: county_geoid {
-    label: "Location County Geoid"
+  dimension: county_lsad {
+    label: "Location County Lsad"
   }
   dimension: calendar_day_of_year {
     label: "Calendar Calendar Day of Year"
