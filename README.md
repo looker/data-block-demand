@@ -1,14 +1,17 @@
-## Area 120 DEMAND - Data Block
+## Google Demand Live Events Data Block
 
 
 **Note: Before using this block, you will need to acquire the [DEMAND dataset from Area 120](https://console.cloud.google.com/marketplace/details/demand-public/demand-live-event-tracker).**
 
-The DEMAND Live Event Tracker data block for Looker is a robust data model that offers a comprehensive tracker of sports, concerts, festivals, conferences, theater and streaming/TV events as they are known to the world, updated daily. This is, in essence: a giant people movement/demand data-set. This data model can be used as an early indicator of when things will start to normalize and events begin to get scheduled and tickets go on sale and show price activity.
+The Google Demand Live Events data block for Looker is a robust data model that offers a comprehensive tracker of sports, concerts, festivals, conferences, theater and streaming/TV events as they are known to the world, updated daily. This is, in essence: a giant people movement/demand data-set. This data model can be used as an early indicator of when things will start to normalize and events begin to get scheduled and tickets go on sale and show price activity.
 
-* Compare regional viral load and community mobility with event demand
-* With the Demand dataset, gain a real time understanding of when and where events occur, and who’s planning on going
-* Use the included weather dataset to forecast when and where local weather conditions will affect event participation
-* Bring this model into your own proprietary model using Looker’s [extensible block structure](https://docs.looker.com/data-modeling/marketplace/customize-blocks)
+-- With the Demand dataset, gain a real time understanding of when and where events occur, and who’s planning on going
+
+-- Compare regional viral load and community mobility with event demand
+
+-- Use the included weather dataset to forecast when and where local weather conditions will affect event participation
+
+-- Bring this model into your own proprietary model using Looker’s [extensible block structure](https://docs.looker.com/data-modeling/marketplace/customize-blocks)
 
 
 
