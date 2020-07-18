@@ -14,7 +14,7 @@ explore: historical_sample {
 }
 
 explore: date_table {
-  from: fips_overlap
+  from: zip_codes
   group_label: "Google Demand"
   view_label: "Location"
   label: "Google Demand Event Data"
@@ -30,7 +30,7 @@ explore: date_table {
     view_label: "Live Events"
     type: left_outer
     relationship: many_to_many
-    sql_on: ${date_table.calendar_date} = ${let_events.local_event_datetime_date} AND ${date_table.area_name} = ${let_events.county_name};;
+    sql_on: ${date_table.calendar_date} = ${let_events.local_event_datetime_date} AND ${date_table.zip_code} = ${let_events.zip_code};;
   }
 
 #   join: livestream_clean {
@@ -44,14 +44,14 @@ explore: date_table {
     view_label: "Covid-19"
     type: left_outer
     relationship: many_to_one
-    sql_on: ${date_table.calendar_date} = ${us_counties.measurement_date} AND ${date_table.area_name} = ${us_counties.county} AND ${us_counties.pk} IS NOT NULL;;
+    sql_on: ${date_table.calendar_date} = ${us_counties.measurement_date} AND ${date_table.county} = ${us_counties.county} AND ${us_counties.pk} IS NOT NULL;;
   }
 
   join: mobility_data_core {
     view_label: "Mobility (US)"
     type: left_outer
     relationship: many_to_one
-    sql_on:${date_table.calendar_date} = ${mobility_data_core.mobility_date} AND ${date_table.area_name} = ${mobility_data_core.sub_region_2} AND ${mobility_data_core.country_region} = 'United States' ;;
+    sql_on:${date_table.calendar_date} = ${mobility_data_core.mobility_date} AND ${date_table.county} = ${mobility_data_core.sub_region_2} AND ${mobility_data_core.country_region} = 'United States' ;;
   }
 
   join: max_date_mobility {
@@ -72,7 +72,7 @@ explore: date_table {
     view_label: "Weather"
     type: left_outer
     relationship: many_to_many
-    sql_on: ${date_table.calendar_date} = ${weather.weather_date} AND ${date_table.area_name} = ${weather.county_lsad} ;;
+    sql_on: ${date_table.calendar_date} = ${weather.weather_date} AND ${date_table.county} = ${weather.county_lsad} ;;
   }
 
   join: expected_weather_by_state {
