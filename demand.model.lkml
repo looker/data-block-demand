@@ -22,13 +22,6 @@ explore: date_table {
   view_label: "Location"
   label: "Live Events - Main"
 
-  # join: zip_timezone_map {
-  #   view_label: "Location"
-  #   type: left_outer
-  #   sql_on: ${date_table.zip} = ${zip_timezone_map.zip} ;;
-  #   relationship: many_to_one
-  # }
-
   join: let_events {
     view_label: "Live Events"
     type: left_outer
@@ -36,12 +29,12 @@ explore: date_table {
     sql_on: ${date_table.calendar_date} = ${let_events.local_event_datetime_date} AND ${date_table.zip_code} = ${let_events.zip_code};;
   }
 
-#   join: livestream_clean {
-#     view_label: "Livestream Events"
-#     type: left_outer
-#     relationship: one_to_many
-#     sql_on: ${date_table.calendar_date} = ${livestream_clean.start_date} AND LOWER(TRIM(${zip_timezone_map.timezone})) = LOWER(TRIM(${livestream_clean.timezone}));;
-#   }
+  join: livestream_clean {
+    view_label: "Livestream Events"
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${date_table.calendar_date} = ${livestream_clean.start_date} ;;
+  }
 
   join: us_counties {
     view_label: "Covid-19"
