@@ -1,0 +1,32 @@
+{
+  "label": "DEMAND Live Event Tracker",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://marketplace-api.looker.com/block-icons/demand_icon.png",
+    "tagline": "Use this massive consumer demand dataset to get an early indication of when things start to normalize."
+  },
+
+  "constants": {
+    "CONNECTION_NAME": {
+      "label": "Connection Name",
+      "value_constraint": "connection"
+    },
+    "CONFIG_PROJECT_NAME": {
+      "label": "Config Project Name"
+    }
+  },
+  "models": [
+    {
+      "name": "mobility",
+      "connection_constant": "CONNECTION_NAME"
+    }
+  ],
+  "auxiliary_projects": [
+    {
+      "git_uri": "git://github.com/llooker/data-block-community-mobility-config.git",
+      "git_ref": "5bd6a4bbcb8c1a73629518ed71c426069f498fa9",
+      "label": "Community Mobility Reports Config",
+      "constant_name": "CONFIG_PROJECT_NAME"
+    }
+  ]
+}
