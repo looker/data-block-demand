@@ -8,17 +8,19 @@ persist_for: "48 hours"
 
 explore: let_livestream {
   label: "Livestream Events Data"
+  group_label: "Google Demand Live Events"
 }
 
 explore: historical_sample {
   label: "Historical Events Data"
+  group_label: "Google Demand Live Events"
 }
 
 explore: date_table {
   from: zip_codes
-  group_label: "Google Demand"
+  group_label: "Google Demand Live Events"
   view_label: "Location"
-  label: "Google Demand Event Data"
+  label: "Live Events - Main"
 
   # join: zip_timezone_map {
   #   view_label: "Location"
