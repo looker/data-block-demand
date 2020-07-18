@@ -30,16 +30,6 @@ view: zip_codes {
     sql: ${calendar_date}>CURRENT_DATE ;;
   }
 
-  dimension: area_land_meters {
-    type: number
-    sql: ${TABLE}.area_land_meters ;;
-  }
-
-  dimension: area_water_meters {
-    type: number
-    sql: ${TABLE}.area_water_meters ;;
-  }
-
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
@@ -51,31 +41,37 @@ view: zip_codes {
   }
 
   dimension: fips_class_code {
+    hidden: yes
     type: string
     sql: ${TABLE}.fips_class_code ;;
   }
 
   dimension: functional_status {
+    hidden: yes
     type: string
     sql: ${TABLE}.functional_status ;;
   }
 
   dimension: internal_point_geom {
+    hidden: yes
     type: string
     sql: ${TABLE}.internal_point_geom ;;
   }
 
   dimension: internal_point_lat {
+    hidden: yes
     type: number
     sql: ${TABLE}.internal_point_lat ;;
   }
 
   dimension: internal_point_lon {
+    hidden: yes
     type: number
     sql: ${TABLE}.internal_point_lon ;;
   }
 
   dimension: mtfcc_feature_class_code {
+    hidden: yes
     type: string
     sql: ${TABLE}.mtfcc_feature_class_code ;;
   }
@@ -101,11 +97,13 @@ view: zip_codes {
   }
 
   dimension: zip_code_geom {
+    hidden: yes
     type: string
     sql: ${TABLE}.zip_code_geom ;;
   }
 
   measure: count {
+    hidden: yes
     type: count
     drill_fields: [state_name]
   }
@@ -148,7 +146,6 @@ view: zip_codes {
       <div style="background-color: #f6f8fa; height:100%; width:100%; display:inline-block;"><center><font size="4"><strong>{{linked_value}} </strong></font><a style="display:inline-block;"><img src="https://i.ya-webdesign.com/images/three-dots-png-6.png" width="12px"></a></center></div>
       <div style="background-color: #f6f8fa; height:500px;width:100%"></div>;;
   }
-  #F6F6F7
 
   measure: hub_state_selection {
     label: "Hub State"
