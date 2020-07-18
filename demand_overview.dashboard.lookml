@@ -817,7 +817,7 @@
     model: demand
     explore: date_table
     type: looker_map
-    fields: [date_table.county, let_events.count_active]
+    fields: [date_table.zip_code, let_events.count_active]
     limit: 500
     map_plot_mode: points
     heatmap_gridlines: true
@@ -889,7 +889,7 @@
     model: demand
     explore: date_table
     type: looker_map
-    fields: [date_table.county, let_events.count_active]
+    fields: [date_table.zip_code, let_events.count_active]
     limit: 500
     map_plot_mode: points
     heatmap_gridlines: true
@@ -961,7 +961,7 @@
     model: demand
     explore: date_table
     type: looker_map
-    fields: [date_table.county, let_events.count_active]
+    fields: [date_table.zip_code, let_events.count_active]
     limit: 500
     map_plot_mode: points
     heatmap_gridlines: true
@@ -1033,7 +1033,7 @@
     model: demand
     explore: date_table
     type: looker_map
-    fields: [let_events.count_active, date_table.county]
+    fields: [let_events.count_active, date_table.zip_code]
     sorts: [let_events.count_active desc]
     limit: 500
     map_plot_mode: points
