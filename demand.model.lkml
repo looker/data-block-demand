@@ -1,6 +1,7 @@
 connection: "brick-layer"
 
 include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "/*.dashboard.lookml"
 
 persist_for: "48 hours"
 

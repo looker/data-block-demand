@@ -1898,7 +1898,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand_live_events
+    model: demand
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
@@ -1911,7 +1911,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand_live_events
+    model: demand
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
@@ -1924,7 +1924,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand_live_events
+    model: demand
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
@@ -1937,8 +1937,8 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand_live_events
-    explore: date_table_hotel
+    model: demand
+    explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
   - name: Date Range
