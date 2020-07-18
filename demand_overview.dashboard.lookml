@@ -818,7 +818,7 @@
     explore: date_table
     type: looker_map
     fields: [date_table.zip_code, let_events.count_active]
-    limit: 500
+    limit: 5000
     map_plot_mode: points
     heatmap_gridlines: true
     heatmap_gridlines_empty: false
@@ -890,7 +890,7 @@
     explore: date_table
     type: looker_map
     fields: [date_table.zip_code, let_events.count_active]
-    limit: 500
+    limit: 5000
     map_plot_mode: points
     heatmap_gridlines: true
     heatmap_gridlines_empty: false
@@ -962,7 +962,7 @@
     explore: date_table
     type: looker_map
     fields: [date_table.zip_code, let_events.count_active]
-    limit: 500
+    limit: 5000
     map_plot_mode: points
     heatmap_gridlines: true
     heatmap_gridlines_empty: false
@@ -1035,7 +1035,7 @@
     type: looker_map
     fields: [let_events.count_active, date_table.zip_code]
     sorts: [let_events.count_active desc]
-    limit: 500
+    limit: 5000
     map_plot_mode: points
     heatmap_gridlines: true
     heatmap_gridlines_empty: false
