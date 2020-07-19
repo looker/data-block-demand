@@ -9,7 +9,7 @@ constant: CONFIG_PROJECT_NAME {
   export: override_required
 }
 constant: DEMAND_SCHEMA_NAME {
-  value: "data-block-demand-config"
+  value: "demand-public.let_looker"
   export: override_required
 }
 
