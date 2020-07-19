@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/let_livestream.view.lkml"
+
 view: let_livestream {
+  extends: [let_livestream_config]
+}
+
+view: let_livestream_core {
   sql_table_name: `demand-public.let_looker.let_livestream`
     ;;
 

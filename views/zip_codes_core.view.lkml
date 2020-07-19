@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/zip_codes.view.lkml"
+
 view: zip_codes {
+  extends: [zip_codes_config]
+}
+
+view: zip_codes_core {
 #   sql_table_name: `bigquery-public-data.geo_us_boundaries.zip_codes`;;
   derived_table: {
     sql: SELECT * FROM `bigquery-public-data.geo_us_boundaries.zip_codes`

@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/school_districts.view.lkml"
+
 view: school_districts {
+  extends: [school_districts_config]
+}
+
+view: school_districts_core {
   sql_table_name: `demand-public.let_looker.school_districts`
     ;;
 

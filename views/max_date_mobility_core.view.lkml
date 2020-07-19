@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/max_date_mobility.view.lkml"
+
 view: max_date_mobility {
+  extends: [max_date_mobility_config]
+}
+
+view: max_date_mobility_core {
   derived_table: {
     sql: SELECT
             country_region_code

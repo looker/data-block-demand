@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/let_events.view.lkml"
+
 view: let_events {
-  sql_table_name: `demand-public.let_looker.let_events`
+  extends: [let_events_config]
+}
+
+view: let_events_core {
+  sql_table_name: `@{DEMAND_SCHEMA_NAME}.let_events`
     ;;
   drill_fields: [id]
 

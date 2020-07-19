@@ -1,7 +1,10 @@
-# If necessary, uncomment the line below to include explore_source.
-# include: "election_model.model.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/max_measurement_date.view.lkml"
 
 view: max_measurement_date {
+  extends: [max_measurement_date_config]
+}
+
+view: max_measurement_date_core {
   derived_table: {
     explore_source: date_table {
       column: max_measurement_date { field: us_counties.max_measurement_date }

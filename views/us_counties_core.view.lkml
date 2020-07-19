@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/us_counties.view.lkml"
+
 view: us_counties {
+  extends: [us_counties_config]
+}
+
+view: us_counties_core {
   sql_table_name: `bigquery-public-data.covid19_nyt.us_counties`
     ;;
 
@@ -13,7 +19,6 @@ view: us_counties {
   }
 
   dimension: confirmed_cases {
-    hidden: yes
     type: number
     sql: ${TABLE}.confirmed_cases ;;
   }
@@ -25,6 +30,7 @@ view: us_counties {
   }
 
   measure: max_confirmed_cases {
+    hidden: yes
     type: sum
     sql: ${confirmed_cases} ;;
     filters: [is_max_measurement_date: "Yes"]
@@ -76,7 +82,6 @@ view: us_counties {
   }
 
   dimension: deaths {
-    hidden: yes
     type: number
     sql: ${TABLE}.deaths ;;
   }

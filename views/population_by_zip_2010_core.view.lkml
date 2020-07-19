@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/population_by_zip_2010.view.lkml"
+
 view: population_by_zip_2010 {
+  extends: [population_by_zip_2010_config]
+}
+
+view: population_by_zip_2010_core {
   sql_table_name: `bigquery-public-data.census_bureau_usa.population_by_zip_2010`
     ;;
 

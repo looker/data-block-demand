@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/date_table.view.lkml"
+
 view: date_table {
+  extends: [date_table_config]
+}
+
+view: date_table_core {
   derived_table: {
     sql: SELECT date_add(date_sub(date_trunc(CURRENT_DATE, year), interval 365 day), interval num day) AS day
                 FROM  (

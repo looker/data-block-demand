@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/expected_weather_by_state.view.lkml"
+
 view: expected_weather_by_state {
+  extends: [expected_weather_by_state_config]
+}
+
+view: expected_weather_by_state_core {
   derived_table: {
     explore_source: date_table {
       column: calendar_day_of_year {}

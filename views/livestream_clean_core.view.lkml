@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/livestream_clean.view.lkml"
+
 view: livestream_clean {
+  extends: [livestream_clean_config]
+}
+
+view: livestream_clean_core {
   derived_table: {
     sql: SELECT audience_size_index
       , event_url

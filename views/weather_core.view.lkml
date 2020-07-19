@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/weather.view.lkml"
+
 view: weather {
+  extends: [weather_config]
+}
+
+view: weather_core {
   derived_table: {
     sql_trigger_value: SELECT count(*) from `bigquery-public-data.ghcn_d.ghcnd_2020` ;;
     sql: WITH weather_raw AS (SELECT id,date,element,value,mflag,qflag,sflag,time FROM `bigquery-public-data.ghcn_d.ghcnd_2020`

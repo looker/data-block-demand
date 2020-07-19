@@ -1,4 +1,10 @@
+include: "//@{CONFIG_PROJECT_NAME}/historical_sample.view.lkml"
+
 view: historical_sample {
+  extends: [historical_sample_config]
+}
+
+view: historical_sample_core {
   sql_table_name: `demand-public.let_looker.historical_sample`
     ;;
   drill_fields: [id]

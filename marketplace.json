@@ -1,9 +1,9 @@
 {
-  "label": "DEMAND Live Event Tracker",
+  "label": "Google Demand Live Events",
   "category_label": "Models",
   "branding": {
     "image_uri": "https://marketplace-api.looker.com/block-icons/demand_icon.png",
-    "tagline": "Use this massive consumer demand dataset to get an early indication of when things start to normalize."
+    "tagline": “Use this data block to track real-time consumer demand in this era of uncertainty.”
   },
 
   "constants": {
@@ -13,19 +13,22 @@
     },
     "CONFIG_PROJECT_NAME": {
       "label": "Config Project Name"
+    },
+    "DEMAND_SCHEMA_NAME": {
+      "label": "Demand dataset schema name"
     }
   },
   "models": [
     {
-      "name": "mobility",
+      "name": "demand",
       "connection_constant": "CONNECTION_NAME"
     }
   ],
   "auxiliary_projects": [
     {
-      "git_uri": "git://github.com/llooker/data-block-community-mobility-config.git",
-      "git_ref": "5bd6a4bbcb8c1a73629518ed71c426069f498fa9",
-      "label": "Community Mobility Reports Config",
+      "git_uri": "git://github.com/llooker/data-block-demand-config.git",
+      "git_ref": "ea7710688c7658c0c099cedeb8f42280025ac4b8",
+      "label": "Google Demand Live Events Config",
       "constant_name": "CONFIG_PROJECT_NAME"
     }
   ]
