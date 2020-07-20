@@ -26,7 +26,7 @@
   ],
   "auxiliary_projects": [
     {
-      "git_uri": "git://github.com/llooker/data-block-demand-config.git",
+      "git_uri": "git://github.com/looker/data-block-demand-config.git",
       "git_ref": "007d9c64808b9f5a5385d38dc3ba03620dd90350",
       "label": "Google Demand Live Events Config",
       "constant_name": "CONFIG_PROJECT_NAME"
