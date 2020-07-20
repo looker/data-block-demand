@@ -11,18 +11,18 @@ view: us_counties_core {
   dimension: pk {
     type: string
     hidden: yes
-#     sql: CONCAT(${measurement_raw},${county},${fips_raw}) ;;
+    # sql: CONCAT(${measurement_raw},${county},${fips_raw}) ;;
     sql: CONCAT(us_counties.date,us_counties.county,(CAST((CASE WHEN us_counties.county = 'New York City' THEN '36061'
-                   WHEN us_counties.county = 'Kansas City' AND us_counties.state_name = 'Missouri' THEN '29095'
-                   ELSE us_counties.county_fips_code END) as STRING)))  ;;
+                  WHEN us_counties.county = 'Kansas City' AND us_counties.state_name = 'Missouri' THEN '29095'
+                  ELSE us_counties.county_fips_code END) as STRING)))  ;;
     primary_key: yes
   }
 
   dimension: confirmed_cases {
+    hidden: yes
     type: number
     sql: ${TABLE}.confirmed_cases ;;
   }
-
 
   measure: total_confirmed_cases {
     type: sum
@@ -30,7 +30,6 @@ view: us_counties_core {
   }
 
   measure: max_confirmed_cases {
-    hidden: yes
     type: sum
     sql: ${confirmed_cases} ;;
     filters: [is_max_measurement_date: "Yes"]
@@ -82,6 +81,7 @@ view: us_counties_core {
   }
 
   dimension: deaths {
+    hidden: yes
     type: number
     sql: ${TABLE}.deaths ;;
   }
@@ -98,6 +98,7 @@ view: us_counties_core {
   }
 
   dimension: state_name {
+    hidden: yes
     type: string
     sql: ${TABLE}.state_name ;;
     map_layer_name: us_states

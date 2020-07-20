@@ -91,7 +91,7 @@ view: weather_core {
               JOIN `bigquery-public-data.ghcn_d.ghcnd_stations` stations on w.id=stations.id
               GROUP BY date,w.id,stations.longitude, stations.latitude)
               SELECT
-               c.lsad_name,
+               c.geo_id,
               w.date
               ,AVG(TMAX) AS TMAX
           ,AVG(WESD) AS WESD
@@ -178,9 +178,12 @@ view: weather_core {
     hidden: yes
   }
 
-  dimension: county_lsad {
+  dimension: fips {
+    label: "County FIPS"
+    view_label: "Location"
     type: string
-    sql: CAST(${TABLE}.county_lsad as string);;
+    sql: CAST(${TABLE}.geo_id as string);;
+    map_layer_name: us_counties_fips
   }
 
   dimension: awdr {
@@ -660,7 +663,7 @@ dimension: pk {
   hidden: yes
   primary_key: yes
   type: string
-  sql: CONCAT(CAST(${weather_date} AS STRING),'-',CAST(${county_lsad} AS STRING)) ;;
+  sql: CONCAT(CAST(${weather_date} AS STRING),'-',CAST(${fips} AS STRING)) ;;
 }
 
 dimension: location {
@@ -691,21 +694,21 @@ measure: average_daily_precipitation {
 }
 
 set: detail {
-  fields: [county_lsad, tmax]
+  fields: [fips, tmax]
 }
 }
 
 view: weather_facts {
   derived_table: {
     explore_source: date_table {
-      column: county_lsad { field: fips_overlap.area_name }
+      column: county_geoid { field: us_counties.fips }
       column: calendar_day_of_year {}
       column: average_max_temparature { field: weather.average_max_temparature }
       column: average_min_temparature { field: weather.average_min_temparature }
     }
   }
-  dimension: county_lsad {
-    label: "Location County Lsad"
+  dimension: county_geoid {
+    label: "Location County Geoid"
   }
   dimension: calendar_day_of_year {
     label: "Calendar Calendar Day of Year"

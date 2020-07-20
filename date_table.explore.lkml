@@ -51,7 +51,7 @@ explore: date_table_core {
     view_label: "Weather"
     type: left_outer
     relationship: many_to_many
-    sql_on: ${date_table.calendar_date} = ${weather.weather_date} AND ${date_table.county} = ${weather.county_lsad} ;;
+    sql_on: ${date_table.calendar_date} = ${weather.weather_date} AND ${us_counties.fips} = ${weather.fips} ;;
   }
 
   join: expected_weather_by_state {
