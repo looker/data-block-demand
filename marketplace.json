@@ -17,7 +17,7 @@
   },
   "models": [
     {
-      "name": "demand",
+      "name": "demand_core",
       "connection_constant": "CONNECTION_NAME"
     }
   ],
