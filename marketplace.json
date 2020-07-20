@@ -13,9 +13,6 @@
     },
     "CONFIG_PROJECT_NAME": {
       "label": "Config Project Name"
-    },
-    "DEMAND_SCHEMA_NAME": {
-      "label": "Demand dataset schema name"
     }
   },
   "models": [
