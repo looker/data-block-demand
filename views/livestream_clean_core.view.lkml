@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/livestream_clean.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/livestream_clean.view.lkml"
 
 view: livestream_clean {
   extends: [livestream_clean_config]

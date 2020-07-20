@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/let_livestream.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/let_livestream.view.lkml"
 
 view: let_livestream {
   extends: [let_livestream_config]

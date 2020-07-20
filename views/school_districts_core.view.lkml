@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/school_districts.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/school_districts.view.lkml"
 
 view: school_districts {
   extends: [school_districts_config]

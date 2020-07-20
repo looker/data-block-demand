@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/expected_weather_by_state.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/expected_weather_by_state.view.lkml"
 
 view: expected_weather_by_state {
   extends: [expected_weather_by_state_config]

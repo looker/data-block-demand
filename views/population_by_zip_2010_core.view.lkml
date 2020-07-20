@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/population_by_zip_2010.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/population_by_zip_2010.view.lkml"
 
 view: population_by_zip_2010 {
   extends: [population_by_zip_2010_config]

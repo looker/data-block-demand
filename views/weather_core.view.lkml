@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/weather.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/weather.view.lkml"
 
 view: weather {
   extends: [weather_config]

@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/date_table.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/date_table.view.lkml"
 
 view: date_table {
   extends: [date_table_config]

@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/zip_codes.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/zip_codes.view.lkml"
 
 view: zip_codes {
   extends: [zip_codes_config]

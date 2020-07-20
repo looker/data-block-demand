@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/mobility_data.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/mobility_data.view.lkml"
 
 view: mobility_data {
   extends: [mobility_data_config]

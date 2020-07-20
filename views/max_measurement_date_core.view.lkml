@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/max_measurement_date.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/max_measurement_date.view.lkml"
 
 view: max_measurement_date {
   extends: [max_measurement_date_config]

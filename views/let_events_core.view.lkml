@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/let_events.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/let_events.view.lkml"
 
 view: let_events {
   extends: [let_events_config]

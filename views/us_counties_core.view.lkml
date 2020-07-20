@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/us_counties.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/us_counties.view.lkml"
 
 view: us_counties {
   extends: [us_counties_config]

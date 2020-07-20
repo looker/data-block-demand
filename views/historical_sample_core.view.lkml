@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/historical_sample.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/views/historical_sample.view.lkml"
 
 view: historical_sample {
   extends: [historical_sample_config]
