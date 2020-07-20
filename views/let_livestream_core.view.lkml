@@ -5,7 +5,7 @@ view: let_livestream {
 }
 
 view: let_livestream_core {
-  sql_table_name: `@{DEMAND_SCHEMA_NAME}.let_livestream`
+  sql_table_name: `demand-public.let_looker.let_livestream`
     ;;
 
   dimension: artist {

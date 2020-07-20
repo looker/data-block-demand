@@ -5,7 +5,7 @@ view: let_events {
 }
 
 view: let_events_core {
-  sql_table_name: `@{DEMAND_SCHEMA_NAME}.let_events`
+  sql_table_name: `demand-public.let_looker.let_events`
     ;;
   drill_fields: [id]
 

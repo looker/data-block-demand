@@ -8,14 +8,7 @@ constant: CONFIG_PROJECT_NAME {
   value: "data-block-demand-config"
   export: override_required
 }
-constant: DEMAND_SCHEMA_NAME {
-  value: "demand-public.let_looker"
-  export: override_required
-}
 
 local_dependency: {
   project: "@{CONFIG_PROJECT_NAME}"
-  override_constant: DEMAND_SCHEMA_NAME {
-    value: "@{DEMAND_SCHEMA_NAME}"
-  }
 }
