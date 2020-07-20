@@ -4,7 +4,7 @@
   elements:
   - title: Hub State 1
     name: Hub State 1
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [date_table.hub_state_selection]
@@ -41,7 +41,7 @@
     height: 2
   - title: Hub State 2
     name: Hub State 2
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [date_table.hub_state_selection]
@@ -78,7 +78,7 @@
     height: 2
   - title: Hub State 3
     name: Hub State 3
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [date_table.hub_state_selection]
@@ -115,7 +115,7 @@
     height: 2
   - title: Hub State 4
     name: Hub State 4
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [date_table.hub_state_selection]
@@ -152,7 +152,7 @@
     height: 2
   - title: Active Live Events
     name: Active Live Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active]
@@ -181,7 +181,7 @@
     height: 2
   - title: Est Audience Size
     name: Est Audience Size
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.total_estimated_audience_size]
@@ -212,7 +212,7 @@
     height: 2
   - title: Total DMAs
     name: Total DMAs
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_market_areas]
@@ -243,7 +243,7 @@
     height: 2
   - title: Cancellation Rate
     name: Cancellation Rate
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.cancellation_rate]
@@ -272,7 +272,7 @@
     height: 2
   - title: US
     name: US
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_geo_choropleth
     fields: [let_events.count_active, date_table.state_name]
@@ -326,7 +326,7 @@
     height: 4
   - title: Event Status
     name: Event Status
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_column
     fields: [active_events, cancelled_2, date_table.calendar_week, postponed]
@@ -430,7 +430,7 @@
     height: 4
   - title: 1) Events
     name: 1) Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -462,7 +462,7 @@
     height: 2
   - title: 1) Audience
     name: 1) Audience
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -494,7 +494,7 @@
     height: 2
   - title: 1) Cancellation
     name: 1) Cancellation
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -526,7 +526,7 @@
     height: 2
   - title: 2) Events
     name: 2) Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -558,7 +558,7 @@
     height: 2
   - title: 3) Events
     name: 3) Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -590,7 +590,7 @@
     height: 2
   - title: 4) Events
     name: 4) Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -622,7 +622,7 @@
     height: 2
   - title: 2) Audience
     name: 2) Audience
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -654,7 +654,7 @@
     height: 2
   - title: 3) Audience
     name: 3) Audience
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -686,7 +686,7 @@
     height: 2
   - title: 4) Audience
     name: 4) Audience
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -718,7 +718,7 @@
     height: 2
   - title: 2) Cancellation
     name: 2) Cancellation
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -750,7 +750,7 @@
     height: 2
   - title: 3) Cancellation
     name: 3) Cancellation
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -782,7 +782,7 @@
     height: 2
   - title: 4) Cancellation
     name: 4) Cancellation
-    model: demand
+    model: demand_core
     explore: date_table
     type: single_value
     fields: [let_events.count_active, let_events.total_estimated_audience_size, let_events.cancellation_rate]
@@ -814,7 +814,7 @@
     height: 2
   - title: 1) County
     name: 1) County
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_map
     fields: [date_table.zip_code, let_events.count_active]
@@ -886,7 +886,7 @@
     height: 6
   - title: 2) County
     name: 2) County
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_map
     fields: [date_table.zip_code, let_events.count_active]
@@ -958,7 +958,7 @@
     height: 6
   - title: 3) County
     name: 3) County
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_map
     fields: [date_table.zip_code, let_events.count_active]
@@ -1030,7 +1030,7 @@
     height: 6
   - title: 4) County
     name: 4) County
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_map
     fields: [let_events.count_active, date_table.zip_code]
@@ -1103,7 +1103,7 @@
     height: 6
   - title: 1) Covid
     name: 1) Covid
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_line
     fields: [date_table.calendar_date, us_counties.total_confirmed_cases, mobility_data_core.residential_7_day_moving_avg,
@@ -1187,7 +1187,7 @@
     height: 6
   - title: 2) Covid
     name: 2) Covid
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_line
     fields: [date_table.calendar_date, us_counties.total_confirmed_cases, mobility_data_core.residential_7_day_moving_avg,
@@ -1271,7 +1271,7 @@
     height: 6
   - title: 3) Covid
     name: 3) Covid
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_line
     fields: [date_table.calendar_date, us_counties.total_confirmed_cases, mobility_data_core.residential_7_day_moving_avg,
@@ -1355,7 +1355,7 @@
     height: 6
   - title: 4) Covid
     name: 4) Covid
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_line
     fields: [date_table.calendar_date, us_counties.total_confirmed_cases, mobility_data_core.residential_7_day_moving_avg,
@@ -1439,7 +1439,7 @@
     height: 6
   - title: 1) Category
     name: 1) Category
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_pie
     fields: [category, let_events.count_active]
@@ -1468,7 +1468,7 @@
     height: 6
   - title: 2) Category
     name: 2) Category
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_pie
     fields: [category, let_events.count_active]
@@ -1497,7 +1497,7 @@
     height: 6
   - title: 3) Category
     name: 3) Category
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_pie
     fields: [category, let_events.count_active]
@@ -1526,7 +1526,7 @@
     height: 6
   - title: 4) Category
     name: 4) Category
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_pie
     fields: [category, let_events.count_active]
@@ -1555,7 +1555,7 @@
     height: 6
   - title: 1) Top Events
     name: 1) Top Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_grid
     fields: [let_events.total_estimated_audience_size, let_events.name, let_events.dma_name]
@@ -1637,7 +1637,7 @@
     height: 3
   - title: 2) Top Events
     name: 2) Top Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_grid
     fields: [let_events.total_estimated_audience_size, let_events.name, let_events.dma_name]
@@ -1719,7 +1719,7 @@
     height: 3
   - title: 3) Top Events
     name: 3) Top Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_grid
     fields: [let_events.total_estimated_audience_size, let_events.name, let_events.dma_name]
@@ -1801,7 +1801,7 @@
     height: 3
   - title: 4) Top Events
     name: 4) Top Events
-    model: demand
+    model: demand_core
     explore: date_table
     type: looker_grid
     fields: [let_events.total_estimated_audience_size, let_events.name, let_events.dma_name]
@@ -1898,7 +1898,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand
+    model: demand_core
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
@@ -1911,7 +1911,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand
+    model: demand_core
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
@@ -1924,7 +1924,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand
+    model: demand_core
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
@@ -1937,7 +1937,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: demand
+    model: demand_core
     explore: date_table
     listens_to_filters: []
     field: date_table.hub_state
