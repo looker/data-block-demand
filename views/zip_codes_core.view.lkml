@@ -83,6 +83,7 @@ view: zip_codes_core {
   }
 
   dimension: state_code {
+    label: "State Abbreviation"
     type: string
     sql: ${TABLE}.state_code ;;
   }
