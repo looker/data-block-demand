@@ -20,7 +20,7 @@ FROM `demand-public.let_looker.let_livestream`
 WHERE event_url IS NOT NULL AND timezone NOT LIKE '%GMT%'
 GROUP BY 1,2,3,4,5,6,7
  ;;
-    sql_trigger_value: SELECT CURRENT_DATE ;;
+    # sql_trigger_value: SELECT CURRENT_DATE ;;
 
   }
 

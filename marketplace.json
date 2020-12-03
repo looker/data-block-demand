@@ -3,8 +3,7 @@
   "category_label": "Models",
   "branding": {
     "image_uri": "https://marketplace-api.looker.com/block-icons/demand_icon.png",
-    "tagline": "Use this data block to track real-time consumer demand in this era of uncertainty. (Beta)",
-    "badge": "Beta"
+    "tagline": "Bring your unique consumer demand insights from Signals into Looker. (Beta)",
   },
 
   "constants": {
